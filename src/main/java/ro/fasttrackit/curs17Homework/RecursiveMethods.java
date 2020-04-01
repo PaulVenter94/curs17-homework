@@ -12,10 +12,10 @@ public class RecursiveMethods {
 
     public int evenSum(int n) {
         if (n < 0) throw new IllegalArgumentException("It can only be positive!");
-        if (n <= 2) {
-            return n == 0 ? 0 : 1;
+        if (n <= 1) {
+            return 0;
         } else {
-            return n % 2 == 0 ? evenSum(n - 3) + (n - 1) : evenSum(n - 2) + n;
+            return n % 2 == 0 ? evenSum(n - 1) + n : evenSum(n - 1);
         }
     }
 
@@ -50,8 +50,8 @@ public class RecursiveMethods {
         if (noSpace.length() <= 1) {
             return true;
         } else {
-            var subArray = noSpace.length() == 2 ? "" : noSpace.substring(1, noSpace.length() - 1);
-            return noSpace.charAt(0) == noSpace.charAt(word.length() - 1) ? isPalindrome(subArray) : false;
+            var subArray = noSpace.substring(1, noSpace.length() - 1);
+            return noSpace.charAt(0) == noSpace.charAt(word.length() - 1) && isPalindrome(subArray);
         }
     }
 

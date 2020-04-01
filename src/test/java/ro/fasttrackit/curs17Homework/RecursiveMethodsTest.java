@@ -36,13 +36,13 @@ class RecursiveMethodsTest {
     @Test
     @DisplayName("evenSum(1)=1")
     void evenSumFor1() {
-        assertThat(recursiveMethods.evenSum(1)).isEqualTo(1);
+        assertThat(recursiveMethods.evenSum(1)).isEqualTo(0);
     }
 
     @Test
     @DisplayName("evenSum(6)=9")
     void evenSumFor6() {
-        assertThat(recursiveMethods.evenSum(6)).isEqualTo(9);
+        assertThat(recursiveMethods.evenSum(6)).isEqualTo(12);
     }
 
     @Test
